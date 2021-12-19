@@ -1,0 +1,28 @@
+{{#if shortURL}}
+<div class="d-flex flex-column align-content-center">
+  <h3 class="mb-3 text-center">Short URL: <u><a id="localShortURL" href="/{{shortURL}}"
+        target="_blank">{{origin}}/{{shortURL}}</a></u>
+  </h3>
+  <button class="btn btn-success btn-lg shorten-btn" onclick="copy()">Copy</button>
+</div>
+
+{{!-- directly write the javascript in the body --}}
+<script>
+  function copy() {
+    const localShortURL = document.querySelector("#localShortURL") // same as document.getElementById("generatedURL")
+    navigator.clipboard.writeText(localShortURL.innerText)
+      .then(() => alert('copied'))
+      .catch(error => console.log(error))
+  }
+</script>
+
+{{else}}
+<form class="mx-5 d-flex justify-content-center" action="/" method="POST">
+  <div class="d-flex flex-column align-content-center">
+    <label for="input-url" class="form-label btn active">Paste or Enter the URL</label>
+    <input type="url" class="form-control mb-3" id="input-url" name="url" aria-describedby="input-url"
+      placeholder="https://tw.alphacamp.co/" size="80" required>
+    <button type="submit" class="btn btn-primary btn-lg shorten-btn">Shorten</button>
+  </div>
+</form>
+{{/if}}
