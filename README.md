@@ -3,13 +3,13 @@ A web application for creating short URL for target website.
 
 # Web interface
 ## Main page
-
+![main](https://user-images.githubusercontent.com/87403901/146673308-17bae2a8-ac81-4fbe-8cb7-639263250e4b.png)
 
 ## ShortURL page
-
+![shortURL](https://user-images.githubusercontent.com/87403901/146673314-eceae1bf-9c29-4e31-acb1-6927d0d0eef2.png)
 
 ## Error page
-
+![Error](https://user-images.githubusercontent.com/87403901/146673316-6dce28ce-e642-4459-8557-cbcccaed1628.png)
 
 # Features
 1. Paste or Enter the URL address and click the "Shorten" button.
@@ -49,6 +49,9 @@ Setting the environment for development
 * Node.js 14.16.0
 * Express 4.17.2
 * Express-Handlebars 5.3.5
+* Mongoose 6.1.2
+* MongoDB
+* Robo3T 1.4.4
 
 # Contributor
 [jameshoo123](https://github.com/Azure/azure-content/blob/master/contributor-guide/contributor-guide-index.md)
